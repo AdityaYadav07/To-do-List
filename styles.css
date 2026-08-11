@@ -1,0 +1,311 @@
+/*  BODY */
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+
+/*  MAIN CONTAINER */
+
+.container {
+    max-width: 600px;
+
+    margin: 80px auto 40px auto;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+
+    transition: 0.3s ease;
+}
+
+
+/* Container Hover */
+
+.container:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* HEADING */
+
+h1 {
+    text-align: center;
+
+    margin: 0 0 30px 0;
+
+    padding: 15px 20px;
+
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+
+    color: white !important;
+
+    border-radius: 10px;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.3);
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+
+
+/* H1 Hover */
+
+h1:hover {
+    transform: scale(1.03);
+
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+
+    box-shadow: 0 8px 20px rgba(255, 65, 108, 0.5);
+}
+
+
+/* LABEL */
+
+label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    color: #333;
+
+    text-align: left;
+}
+
+
+/*  INPUT */
+
+input {
+    width: 100%;
+
+    margin-bottom: 15px;
+
+    padding: 12px 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    transition: all 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* Input Hover */
+
+input:hover {
+    border-color: #667eea;
+}
+
+
+/* Input Focus */
+
+input:focus {
+    border-color: #667eea;
+
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+
+/* BUTTON */
+button.btn-primary {
+    display: block;
+    margin: 5px auto 0 auto;
+}
+
+button {
+    display: block;
+    padding: 12px 25px;
+    margin: 5px auto 0 auto;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Click */
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* TASK LIST */
+
+#taskList {
+    margin-top: 25px;
+    padding: 0;
+    text-align: left;
+}
+
+#taskList li {
+    margin-bottom: 10px;
+    padding: 12px 15px;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+/* Left side of task */
+
+#taskList li > div:first-child {
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+    flex: 1;
+}
+
+
+/* Task text */
+
+#taskList li span {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+
+    flex: 1;
+
+    margin-right: 8px;
+}
+
+
+/* Delete Button */
+
+#taskList li button {
+    flex-shrink: 0;
+
+    width: auto;
+
+    padding: 7px 12px;
+
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* Task Hover */
+
+#taskList li:hover {
+    transform: translateX(5px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+
+        margin: 30px auto;
+
+        padding: 20px 15px;
+    }
+
+
+    h1 {
+        font-size: 25px;
+
+        padding: 12px;
+    }
+
+
+    /* Task item */
+
+    #taskList li {
+        padding: 12px 10px;
+
+        gap: 8px;
+
+        align-items: center;
+    }
+
+
+    /* Task text */
+
+    #taskList li span {
+        font-size: 14px;
+
+        line-height: 1.4;
+    }
+
+
+    /* Delete button */
+
+    #taskList li button {
+        width: auto !important;
+
+        min-width: 65px;
+
+        padding: 7px 9px !important;
+
+        font-size: 12px;
+
+        margin: 0 !important;
+
+        flex-shrink: 0;
+    }
+
+
+    /* Checkbox */
+
+    #taskList li input[type="checkbox"] {
+        width: 18px;
+
+        height: 18px;
+
+        flex-shrink: 0;
+
+        margin-right: 8px !important;
+    }
+
+}
